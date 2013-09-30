@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="win32">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Hellow_COCO">
+      <UniqueIdentifier>{7bbc78f4-f3d6-41f2-ab09-dff082a2153c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Hellow_COCO\inputSignal.cpp">
+      <Filter>Hellow_COCO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Hellow_COCO\mouse.cpp">
+      <Filter>Hellow_COCO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Hellow_COCO\myBox2dFunc.cpp">
+      <Filter>Hellow_COCO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Hellow_COCO\myContactListener.cpp">
+      <Filter>Hellow_COCO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Hellow_COCO\myDef.cpp">
+      <Filter>Hellow_COCO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Hellow_COCO\myfunc.cpp">
+      <Filter>Hellow_COCO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Hellow_COCO\myObj.cpp">
+      <Filter>Hellow_COCO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Hellow_COCO\player.cpp">
+      <Filter>Hellow_COCO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Hellow_COCO\sceneRootNode.cpp">
+      <Filter>Hellow_COCO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Hellow_COCO\shaderSprite.cpp">
+      <Filter>Hellow_COCO</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\HelloWorldScene.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hellow_COCO\inputSignal.h">
+      <Filter>Hellow_COCO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hellow_COCO\mouse.h">
+      <Filter>Hellow_COCO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hellow_COCO\myBox2dFunc.h">
+      <Filter>Hellow_COCO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hellow_COCO\myContactListener.h">
+      <Filter>Hellow_COCO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hellow_COCO\myfunc.h">
+      <Filter>Hellow_COCO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hellow_COCO\myObj.h">
+      <Filter>Hellow_COCO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hellow_COCO\player.h">
+      <Filter>Hellow_COCO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hellow_COCO\sceneRootNode.h">
+      <Filter>Hellow_COCO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hellow_COCO\shotBall.h">
+      <Filter>Hellow_COCO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hellow_COCO\shaderSprite.h">
+      <Filter>Hellow_COCO</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
