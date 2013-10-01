@@ -133,6 +133,7 @@
     <ClCompile Include="..\Hellow_COCO\player.cpp" />
     <ClCompile Include="..\Hellow_COCO\sceneRootNode.cpp" />
     <ClCompile Include="..\Hellow_COCO\shaderSprite.cpp" />
+    <ClCompile Include="..\Hellow_COCO\xmlLoader_myObj.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +149,7 @@
     <ClInclude Include="..\Hellow_COCO\sceneRootNode.h" />
     <ClInclude Include="..\Hellow_COCO\shaderSprite.h" />
     <ClInclude Include="..\Hellow_COCO\shotBall.h" />
+    <ClInclude Include="..\Hellow_COCO\xmlLoader_myObj.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>
