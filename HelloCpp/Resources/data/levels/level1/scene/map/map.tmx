@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="100" height="20" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="roadStone" tilewidth="32" tileheight="32">
+  <image source="roadStone.png" width="64" height="64"/>
+ </tileset>
+ <layer name="块层 1" width="100" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztlksKwCAMRO3n/meuSwm0AYnJSN8DydIQZ+K0BgDwzdHPOVSo5ernHirAX2AXacEuAgA1+B+04H+oweal6KqIcu82L0VXRZR6X+0HT2OZWtzB86v94GlspRbt3BQ9n+2HSn/YuSn6I9sPFf54m5uCP1Syg4LmZu+K7FElO2TsZO+NZ+/aKSsq4b3xA9TCBCU=
+  </data>
+ </layer>
+</map>

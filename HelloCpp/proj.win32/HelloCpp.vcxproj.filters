@@ -50,9 +50,6 @@
     <ClCompile Include="..\Hellow_COCO\sceneRootNode.cpp">
       <Filter>Hellow_COCO</Filter>
     </ClCompile>
-    <ClCompile Include="..\Hellow_COCO\shaderSprite.cpp">
-      <Filter>Hellow_COCO</Filter>
-    </ClCompile>
     <ClCompile Include="..\Hellow_COCO\xmlLoader_myObj.cpp">
       <Filter>Hellow_COCO</Filter>
     </ClCompile>
@@ -92,9 +89,6 @@
       <Filter>Hellow_COCO</Filter>
     </ClInclude>
     <ClInclude Include="..\Hellow_COCO\shotBall.h">
-      <Filter>Hellow_COCO</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Hellow_COCO\shaderSprite.h">
       <Filter>Hellow_COCO</Filter>
     </ClInclude>
     <ClInclude Include="..\Hellow_COCO\xmlLoader_myObj.h">
