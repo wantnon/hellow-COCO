@@ -1,11 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="100" height="20" tilewidth="32" tileheight="32">
- <tileset firstgid="1" name="roadStone" tilewidth="32" tileheight="32">
-  <image source="roadStone.png" width="64" height="64"/>
+ <tileset firstgid="1" name="roadStoneWhole" tilewidth="32" tileheight="32">
+  <image source="roadStoneWhole.png" width="256" height="256"/>
+  <tile id="2">
+   <properties>
+    <property name="H_end" value="0.5"/>
+    <property name="H_start" value="1"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="H_end" value="0"/>
+    <property name="H_start" value="0.5"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="isNoContent" value="true"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="isNoContent" value="true"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="H_end" value="0.5"/>
+    <property name="H_start" value="1"/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="H_end" value="0"/>
+    <property name="H_start" value="0.5"/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="H_end" value="0"/>
+    <property name="H_start" value="1"/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="isNoContent" value="true"/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="isNoContent" value="true"/>
+   </properties>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="isNoContent" value="true"/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="H_end" value="0.5"/>
+    <property name="H_start" value="0"/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="H_end" value="1"/>
+    <property name="H_start" value="0.5"/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="H_end" value="0"/>
+    <property name="H_start" value="1"/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="H_end" value="0.5"/>
+    <property name="H_start" value="0"/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="H_end" value="1"/>
+    <property name="H_start" value="0.5"/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="key" value=""/>
+   </properties>
+  </tile>
+  <tile id="32">
+   <properties>
+    <property name="isNoContent" value="true"/>
+   </properties>
+  </tile>
+  <tile id="33">
+   <properties>
+    <property name="H_end" value="1"/>
+    <property name="H_start" value="0"/>
+   </properties>
+  </tile>
+  <tile id="40">
+   <properties>
+    <property name="H_end" value="1"/>
+    <property name="H_start" value="0"/>
+   </properties>
+  </tile>
  </tileset>
- <layer name="块层 1" width="100" height="20">
+ <layer name="layer1" width="100" height="20">
   <data encoding="base64" compression="zlib">
-   eJztlksKwCAMRO3n/meuSwm0AYnJSN8DydIQZ+K0BgDwzdHPOVSo5ernHirAX2AXacEuAgA1+B+04H+oweal6KqIcu82L0VXRZR6X+0HT2OZWtzB86v94GlspRbt3BQ9n+2HSn/YuSn6I9sPFf54m5uCP1Syg4LmZu+K7FElO2TsZO+NZ+/aKSsq4b3xA9TCBCU=
+   eJztl0kKwzAMRdMROkJH6Ajtrr3/Afs3IUGgyLbkOAU9+IiWLGSRZ8dV5TiO080IGbeqk48DckROyJl5ZoEsW9XJxw25Iw/kWbgXx/eioeF7keM4paDfS/R8mCBTZIbMC/VohbTWuu6QfaEe6fcSPR9WyBrZINtCPVohrbWuF+TaU0+h70hqHZJP2rX04UnoO5JaS/r0Qt5VM0/tWnJ4EuoDR+x9Q3qezszyHvNBvlUzTyvnLT0J9YEj9r4hPU9nZnmPoXO0cl7jSe7zIbZyM+N+a6BzjO2N9mThSe7zIbZS6P8aP7i9L9QPDo0nqT7kRutRCNzeJ/mhXUOXJ6k+5EbrUReSF5If2jX0eT/5ByQv6voDtrUSQQ==
   </data>
  </layer>
 </map>
