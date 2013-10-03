@@ -9,7 +9,7 @@
   </tile>
   <tile id="2">
    <properties>
-    <property name="polygon" value="use other"/>
+    <property name="polygon" value="use(-1,0)"/>
    </properties>
   </tile>
   <tile id="3">
@@ -19,12 +19,12 @@
   </tile>
   <tile id="4">
    <properties>
-    <property name="polygon" value="(0,-1)(1,1)(0,1)"/>
+    <property name="polygon" value="use(0,1)"/>
    </properties>
   </tile>
   <tile id="5">
    <properties>
-    <property name="polygon" value="(1,-1)(1,1)(0,1)"/>
+    <property name="polygon" value="use(0,1)"/>
    </properties>
   </tile>
   <tile id="6">
@@ -34,7 +34,7 @@
   </tile>
   <tile id="7">
    <properties>
-    <property name="polygon" value="use other"/>
+    <property name="polygon" value="use(-1,0)"/>
    </properties>
   </tile>
   <tile id="9">
@@ -54,7 +54,7 @@
   </tile>
   <tile id="12">
    <properties>
-    <property name="polygon" value="use other"/>
+    <property name="polygon" value="use(-1,0)"/>
    </properties>
   </tile>
   <tile id="13">
@@ -64,22 +64,22 @@
   </tile>
   <tile id="14">
    <properties>
-    <property name="polygon" value="(0,-1)(1,-1)(0,1)"/>
+    <property name="polygon" value="use(0,1)"/>
    </properties>
   </tile>
   <tile id="15">
    <properties>
-    <property name="polygon" value="(0,-1)(1,-1)(1,1)"/>
+    <property name="polygon" value="use(0,1)"/>
    </properties>
   </tile>
   <tile id="20">
    <properties>
-    <property name="polygon" value="use other"/>
+    <property name="polygon" value="(0,0)(1,2)(0,2)"/>
    </properties>
   </tile>
   <tile id="21">
    <properties>
-    <property name="polygon" value="use other"/>
+    <property name="polygon" value="(1,0)(1,2)(0,2)"/>
    </properties>
   </tile>
   <tile id="22">
@@ -89,23 +89,23 @@
   </tile>
   <tile id="23">
    <properties>
-    <property name="polygon" value="use other"/>
+    <property name="polygon" value="use(-1,0)"/>
    </properties>
   </tile>
   <tile id="30">
    <properties>
-    <property name="polygon" value="use other"/>
+    <property name="polygon" value="(0,0)(1,0)(0,2)"/>
    </properties>
   </tile>
   <tile id="31">
    <properties>
-    <property name="polygon" value="use other"/>
+    <property name="polygon" value="(0,0)(1,0)(1,2)"/>
    </properties>
   </tile>
  </tileset>
  <layer name="Tile Layer 1" width="200" height="20">
   <data encoding="base64" compression="zlib">
-   eJztm9tuwzAIQLNL22ndpS/t9tb8/1culoqEKBjsEHtNOBJSGxHPMQYD6YYhWAMfk3xO8oTkndH7Ijo5XUmf6p4KxwyC1qT9eJjk7fb9eLum6f1M8ivogv4ruXYk38dJdoyONGYQtMa6F3N+UDtu0jlX3hsELejtH5STcD0IekDzfagbOL3nSV6ILs2PuHFxjZP724lxuM/Lgn5g222xLoR8HwTXGBhcb2Dh8iNuXKke0XSCflh6LBJc3weExtlgWbZsC/q8Xkj9yiTfM+6NPmU7cn4RtphHbi2vmfuknr0ka49fPSjxC80WUqzbut1q481ouDfWezmsZ7eXbNVu+0FfG5pnYduU1rHW3C2Qae0bWHrTei6XQV8TnGdh21h6LJKf5HK3gKc2n/KSR++pcetnidNcf9F7rTg/CWz09AspP1ga7z0inblcnIbaGvuOlg95xRHsi2ugNiaVEOdFW8ZB9p3ATklMmoN2vsM+TrXkjnwuiXvhG/c2jX54HVqN7H2GSO/Y90gn1ZJn5nNiJ4zRI5+S8sU5e9H6/wk5pHcWj9S7692nt9YCV0Hfe54Xox74Su48kX5DBmjPbnk2La7UrM+cd9yYUZmbJhZ/hLnmdGGdS2Ospa+5hJ8s0U/tfW7jcwf8QvoNWWl/gHs2jzFqxrTmul42zu0/ej5x+x/Pwzr3mv6Nx/5bum/U00fwuePlF5Lta/debn1KxrSss7dtOT8ZiQ7e/9Jaa8zx69KzpMd7t/+Y23rEBbD9H46tDuk=
+   eJztmd1uwyAMhem2dNP+b9rtrnn/pxzRxGQxgw2YkLTnkyxVKSBic2wgzgEAAAAAAAAAAADY8OrtzdvB2/PguQCwJd7dry6oaTVCdRXbnbd768mCJLcci/h9reC0EeyjoW+N1kAdOV0gFm3kfHnJ9PsU+vbKX1yOaHm2Z0p0IcUileuuve5I1OabWdG3h7+5tX1g/tO22yva2m1lt6qTo5N9E++zaGwevT0x4355+y4YUwv0sb42tlR3157L2ck+ofssGpsHxfgpneT2bjk4/7Q82xO1+ykr08R7y3D+0+TpF9ffV5xOgI6RukjtD3pjvUZSNZfL0+FsTbUj7Yes8gjV4jVQm5NKQL1Yl9mltQP0lOSkFqT6Htbxcpacot8leQ/a+B9T3IfXIZ2RrWsIp5FlDR9Jm+UseWJ+L0yJMUbsp1L7xZa1yI1ZOl7qm8We7u5G39NrzwKXRHvreZ6V7YJWcvVk4rv+Ib275t2kvFLjn5Zv3JRZmJtkGj2GuebaBj+X5ljNvWYPnfS4Tx1dt2ndCbo4cQ1d+f0A924WY9SMqd3rWsU4t/7i+sStfzoP7dxr7m8s1l/ve6ORGqF1x0oXqdjXrr2cf0rG1PjZOracTuaoDV3/KV9LtOi6tJaM+O62xb2tRV4Isf8BWvUMrw==
   </data>
  </layer>
 </map>
