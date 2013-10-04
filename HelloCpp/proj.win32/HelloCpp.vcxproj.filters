@@ -94,5 +94,8 @@
     <ClInclude Include="..\Hellow_COCO\xmlLoader_myObj.h">
       <Filter>Hellow_COCO</Filter>
     </ClInclude>
+    <ClInclude Include="..\Hellow_COCO\myDef.h">
+      <Filter>Hellow_COCO</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

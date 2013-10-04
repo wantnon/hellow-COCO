@@ -103,9 +103,89 @@
    </properties>
   </tile>
  </tileset>
- <layer name="Tile Layer 1" width="200" height="20">
+ <tileset firstgid="33" name="things" tilewidth="64" tileheight="64">
+  <image source="things.png" width="1024" height="128"/>
+ </tileset>
+ <layer name="groundLayer" width="200" height="20">
   <data encoding="base64" compression="zlib">
    eJztmd1uwyAMhem2dNP+b9rtrnn/pxzRxGQxgw2YkLTnkyxVKSBic2wgzgEAAAAAAAAAAADY8OrtzdvB2/PguQCwJd7dry6oaTVCdRXbnbd768mCJLcci/h9reC0EeyjoW+N1kAdOV0gFm3kfHnJ9PsU+vbKX1yOaHm2Z0p0IcUileuuve5I1OabWdG3h7+5tX1g/tO22yva2m1lt6qTo5N9E++zaGwevT0x4355+y4YUwv0sb42tlR3157L2ck+ofssGpsHxfgpneT2bjk4/7Q82xO1+ykr08R7y3D+0+TpF9ffV5xOgI6RukjtD3pjvUZSNZfL0+FsTbUj7Yes8gjV4jVQm5NKQL1Yl9mltQP0lOSkFqT6Htbxcpacot8leQ/a+B9T3IfXIZ2RrWsIp5FlDR9Jm+UseWJ+L0yJMUbsp1L7xZa1yI1ZOl7qm8We7u5G39NrzwKXRHvreZ6V7YJWcvVk4rv+Ib275t2kvFLjn5Zv3JRZmJtkGj2GuebaBj+X5ljNvWYPnfS4Tx1dt2ndCbo4cQ1d+f0A924WY9SMqd3rWsU4t/7i+sStfzoP7dxr7m8s1l/ve6ORGqF1x0oXqdjXrr2cf0rG1PjZOracTuaoDV3/KV9LtOi6tJaM+O62xb2tRV4Isf8BWvUMrw==
   </data>
  </layer>
+ <layer name="thingLayer_tile" width="200" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt08EJgDAQRcG0EhMLMMT+W3NBC/C2EWfgwR7/ZUsBAAAAAAAAuPVozx4Bi5rR+dwtcwh8hD8BfwBv1GjLHgGLOqKRPQIAAACAX7oAIZ0Bwg==
+  </data>
+ </layer>
+ <objectgroup name="thingLayer_polygon" width="200" height="20">
+  <object name="ball_small_0" type="ellipse" x="449" y="769" width="61" height="61">
+   <properties>
+    <property name="bodyType" value="dynamicBody"/>
+    <property name="categoryBits" value="1"/>
+    <property name="density" value="6.5"/>
+    <property name="friction" value="0.5"/>
+    <property name="gravityScale" value="1"/>
+    <property name="groupIndex" value="0"/>
+    <property name="isSensor" value="0"/>
+    <property name="maskBits" value="65535"/>
+    <property name="restitution" value="0"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object name="stone0" type="polygon" x="695" y="831">
+   <properties>
+    <property name="bodyType" value="dynamicBody"/>
+    <property name="categoryBits" value="1"/>
+    <property name="density" value="10"/>
+    <property name="friction" value="0.5"/>
+    <property name="gravityScale" value="1"/>
+    <property name="groupIndex" value="0"/>
+    <property name="isSensor" value="0"/>
+    <property name="maskBits" value="65535"/>
+    <property name="restitution" value="0"/>
+   </properties>
+   <polygon points="8,-1 -120,0 -120,129 11,129"/>
+  </object>
+  <object name="ball_0" type="ellipse" x="512" y="577" width="125" height="124">
+   <properties>
+    <property name="bodyType" value="dynamicBody"/>
+    <property name="categoryBits" value="1"/>
+    <property name="density" value="6.5"/>
+    <property name="friction" value="0.5"/>
+    <property name="gravityScale" value="1"/>
+    <property name="groupIndex" value="0"/>
+    <property name="isSensor" value="0"/>
+    <property name="maskBits" value="65535"/>
+    <property name="restitution" value="0"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object name="ball_small_1" type="ellipse" x="705" y="641" width="61" height="61">
+   <properties>
+    <property name="bodyType" value="dynamicBody"/>
+    <property name="categoryBits" value="1"/>
+    <property name="density" value="6.5"/>
+    <property name="friction" value="0.5"/>
+    <property name="gravityScale" value="1"/>
+    <property name="groupIndex" value="0"/>
+    <property name="isSensor" value="0"/>
+    <property name="maskBits" value="65535"/>
+    <property name="restitution" value="0"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object name="ball_small_2" type="ellipse" x="833" y="704" width="61" height="61">
+   <properties>
+    <property name="bodyType" value="dynamicBody"/>
+    <property name="categoryBits" value="1"/>
+    <property name="density" value="6.5"/>
+    <property name="friction" value="0.5"/>
+    <property name="gravityScale" value="1"/>
+    <property name="groupIndex" value="0"/>
+    <property name="isSensor" value="0"/>
+    <property name="maskBits" value="65535"/>
+    <property name="restitution" value="0"/>
+   </properties>
+   <ellipse/>
+  </object>
+ </objectgroup>
 </map>

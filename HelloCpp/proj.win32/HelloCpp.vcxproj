@@ -142,6 +142,7 @@
     <ClInclude Include="..\Hellow_COCO\mouse.h" />
     <ClInclude Include="..\Hellow_COCO\myBox2dFunc.h" />
     <ClInclude Include="..\Hellow_COCO\myContactListener.h" />
+    <ClInclude Include="..\Hellow_COCO\myDef.h" />
     <ClInclude Include="..\Hellow_COCO\myfunc.h" />
     <ClInclude Include="..\Hellow_COCO\myObj.h" />
     <ClInclude Include="..\Hellow_COCO\player.h" />
