@@ -113,7 +113,7 @@
  </layer>
  <layer name="thingLayer_tile" width="200" height="20">
   <data encoding="base64" compression="zlib">
-   eJzt08EJgDAQRcG0EhMLMMT+W3NBC/C2EWfgwR7/ZUsBAAAAAAAAuPVozx4Bi5rR+dwtcwh8hD8BfwBv1GjLHgGLOqKRPQIAAACAX7oAIZ0Bwg==
+   eJzt17sJwDAMBUCvkt8AMfH+q0WQVAbjzjHkDh4IXqNGhVICAAAAAAAAeOyRo9EtkXXgLjCbK1Leeau6M5LHrgPTq+8E/sgdQJ8/A9r8GQAAAAB85QYPgAJo
   </data>
  </layer>
  <objectgroup name="thingLayer_polygon" width="200" height="20">
@@ -186,6 +186,20 @@
     <property name="restitution" value="0"/>
    </properties>
    <ellipse/>
+  </object>
+  <object name="stone1" type="polygon" x="1081" y="576">
+   <properties>
+    <property name="bodyType" value="dynamicBody"/>
+    <property name="categoryBits" value="1"/>
+    <property name="density" value="10"/>
+    <property name="friction" value="0.5"/>
+    <property name="gravityScale" value="1"/>
+    <property name="groupIndex" value="0"/>
+    <property name="isSensor" value="0"/>
+    <property name="maskBits" value="65535"/>
+    <property name="restitution" value="0"/>
+   </properties>
+   <polygon points="8,-1 -120,0 -120,129 11,129"/>
   </object>
  </objectgroup>
 </map>
