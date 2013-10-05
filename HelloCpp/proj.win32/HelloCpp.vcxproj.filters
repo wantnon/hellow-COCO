@@ -47,9 +47,6 @@
     <ClCompile Include="..\Hellow_COCO\player.cpp">
       <Filter>Hellow_COCO</Filter>
     </ClCompile>
-    <ClCompile Include="..\Hellow_COCO\sceneRootNode.cpp">
-      <Filter>Hellow_COCO</Filter>
-    </ClCompile>
     <ClCompile Include="..\Hellow_COCO\xmlLoader_myObj.cpp">
       <Filter>Hellow_COCO</Filter>
     </ClCompile>
@@ -83,9 +80,6 @@
       <Filter>Hellow_COCO</Filter>
     </ClInclude>
     <ClInclude Include="..\Hellow_COCO\player.h">
-      <Filter>Hellow_COCO</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Hellow_COCO\sceneRootNode.h">
       <Filter>Hellow_COCO</Filter>
     </ClInclude>
     <ClInclude Include="..\Hellow_COCO\shotBall.h">
