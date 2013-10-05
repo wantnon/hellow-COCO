@@ -9,7 +9,6 @@ USING_NS_CC;
 #include <crtdbg.h>
 
 
-
 int APIENTRY _tWinMain(HINSTANCE hInstance,
                        HINSTANCE hPrevInstance,
                        LPTSTR    lpCmdLine,
@@ -48,7 +47,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
     AppDelegate app;
     CCEGLView* eglView = CCEGLView::sharedOpenGLView();
     eglView->setViewName("HelloCpp");
-    eglView->setFrameSize(1136, 640);
+    eglView->setFrameSize(1136, 640);//(960,640);//这里随便设成什么值都能保证正确适配
     // The resolution of ipad3 is very large. In general, PC's resolution is smaller than it.
     // So we need to invoke 'setFrameZoomFactor'(only valid on desktop(win32, mac, linux)) to make the window smaller.
     eglView->setFrameZoomFactor(0.8f);//(0.4f);
