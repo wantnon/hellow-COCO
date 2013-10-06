@@ -3,12 +3,13 @@
 #include "CCEGLView.h"
 
 USING_NS_CC;
-
- #define CRTDBG_MAP_ALLOC
+/*
+ #define CRTDBG_MAP_ALLOC 
  #include <stdlib.h>
 #include <crtdbg.h>
-
-
+ */
+#include"myDef.h"
+//#include "vld.h"
 int APIENTRY _tWinMain(HINSTANCE hInstance,
                        HINSTANCE hPrevInstance,
                        LPTSTR    lpCmdLine,
@@ -53,7 +54,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
     eglView->setFrameZoomFactor(0.8f);//(0.4f);
 	int ret=CCApplication::sharedApplication()->run();
 
-	_CrtDumpMemoryLeaks();
+	//_CrtDumpMemoryLeaks();
     return ret; 
 
 }
