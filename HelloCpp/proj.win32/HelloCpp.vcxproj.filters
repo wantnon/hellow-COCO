@@ -50,6 +50,12 @@
     <ClCompile Include="..\Hellow_COCO\xmlLoader_myObj.cpp">
       <Filter>Hellow_COCO</Filter>
     </ClCompile>
+    <ClCompile Include="..\Hellow_COCO\tiledSceneLoader.cpp">
+      <Filter>Hellow_COCO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Hellow_COCO\thingManager.cpp">
+      <Filter>Hellow_COCO</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -93,6 +99,12 @@
     </ClInclude>
     <ClInclude Include="..\Classes\AppMacros.h">
       <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hellow_COCO\tiledSceneLoader.h">
+      <Filter>Hellow_COCO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hellow_COCO\thingManager.h">
+      <Filter>Hellow_COCO</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -131,6 +131,8 @@
     <ClCompile Include="..\Hellow_COCO\myfunc.cpp" />
     <ClCompile Include="..\Hellow_COCO\myObj.cpp" />
     <ClCompile Include="..\Hellow_COCO\player.cpp" />
+    <ClCompile Include="..\Hellow_COCO\thingManager.cpp" />
+    <ClCompile Include="..\Hellow_COCO\tiledSceneLoader.cpp" />
     <ClCompile Include="..\Hellow_COCO\xmlLoader_myObj.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -147,6 +149,8 @@
     <ClInclude Include="..\Hellow_COCO\myObj.h" />
     <ClInclude Include="..\Hellow_COCO\player.h" />
     <ClInclude Include="..\Hellow_COCO\shotBall.h" />
+    <ClInclude Include="..\Hellow_COCO\thingManager.h" />
+    <ClInclude Include="..\Hellow_COCO\tiledSceneLoader.h" />
     <ClInclude Include="..\Hellow_COCO\xmlLoader_myObj.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
