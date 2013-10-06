@@ -113,7 +113,7 @@
  </layer>
  <layer name="thingLayer_tile" width="200" height="20">
   <data encoding="base64" compression="zlib">
-   eJzt10sKgzAQAFCv0n+3Lf3c/2YG2kWR1kVwdGLfgwEhECXJxJmuAwAAAAAAAHjZlzj8GNuU2Aa881jiFDAvTO1W4v5+3g3GLiWuAe98lHhOPGe2nDsv/QGEGeZJCyJyjv/WYh7A3KL6DMb7u2yy1ai1pl7zqD5jDtn39LO/y24tNWpLax6tZk+j6ko9OVnUnMXM/Vb2/yAsaS21zdgd9O1Oy3xnQa2IWlKusEYtn+seUzwJCA==
+   eJzt10kOwjAMheFcpVCGLYjh/jfDVRdsaBZWHrHT/5O8itRWST2kFAAAAAAAAAAAAABYzRanjbXJ4iB459niIngu0NrD4rmxdrO4C975sng3fma0nLv2/oCiq297d+z9AQ6KnMtOVd/2ImMeAP/Wug+Td1+1+1000WZUr9Z7nrkPRz/T2v0umlFm1Ex7ruY5U1V/i3AnBxaefzHy3Be9DwI9jTLb1GrQr5oWuWYBXopZklzBiDL/1x/FnAmu
   </data>
  </layer>
  <objectgroup name="thingLayer_polygon" width="200" height="20">
@@ -131,7 +131,7 @@
    </properties>
    <ellipse/>
   </object>
-  <object name="stone0" type="polygon" x="695" y="831">
+  <object name="stone" type="polygon" x="695" y="831">
    <properties>
     <property name="bodyType" value="dynamicBody"/>
     <property name="categoryBits" value="1"/>
@@ -159,7 +159,7 @@
    </properties>
    <ellipse/>
   </object>
-  <object name="ball_small" type="ellipse" x="705" y="641" width="61" height="61">
+  <object name="ball_small" type="ellipse" x="1857" y="833" width="61" height="61">
    <properties>
     <property name="bodyType" value="dynamicBody"/>
     <property name="categoryBits" value="1"/>
@@ -187,7 +187,7 @@
    </properties>
    <ellipse/>
   </object>
-  <object name="stone1" type="polygon" x="1081" y="576">
+  <object name="stone" type="polygon" x="1081" y="576">
    <properties>
     <property name="bodyType" value="dynamicBody"/>
     <property name="categoryBits" value="1"/>
@@ -452,6 +452,20 @@
     <property name="restitution" value="0"/>
    </properties>
    <polygon points="-41,56 -91,56 -101,76 -93,94 -43,96 -32,74"/>
+  </object>
+  <object name="stone" type="polygon" x="8246" y="640">
+   <properties>
+    <property name="bodyType" value="dynamicBody"/>
+    <property name="categoryBits" value="1"/>
+    <property name="density" value="10"/>
+    <property name="friction" value="0.5"/>
+    <property name="gravityScale" value="1"/>
+    <property name="groupIndex" value="0"/>
+    <property name="isSensor" value="0"/>
+    <property name="maskBits" value="65535"/>
+    <property name="restitution" value="0"/>
+   </properties>
+   <polygon points="8,-1 -120,0 -120,129 11,129"/>
   </object>
  </objectgroup>
 </map>
