@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{FB71422A-067D-4878-BD23-404F4667E3AB}</ProjectGuid>
+    <ProjectGuid>{7FEB6215-1B82-4FA2-B5ED-C0AE002E555B}</ProjectGuid>
     <RootNamespace>HelloCppwin32</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

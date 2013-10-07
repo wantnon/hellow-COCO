@@ -1,0 +1,1 @@
+HelloCpp属性->配置属性->调试->工作目录，本来为$(ProjectDir)..\Resources，现已改为$(ProjectDir)..\myResources
