@@ -1,2 +1,3 @@
 HelloCpp属性->配置属性->调试->工作目录，本来为$(ProjectDir)..\Resources，现已改为$(ProjectDir)..\myResources
 Resources文件夹保持原样不动，这样有利于ios版本。
+另外注意，要对debug和release都作此改动。
