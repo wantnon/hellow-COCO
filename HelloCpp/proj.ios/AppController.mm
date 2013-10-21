@@ -75,6 +75,8 @@ static AppDelegate s_sharedApplication;
     //-------------[[by yang chao BEGIN]]
     //开启多点触摸
     [__glView setMultipleTouchEnabled:YES];
+    //向微信注册
+    [WXApi registerApp:@"hellowcocoweixinappid" withDescription:@"demo 2.0"];
     //-------------[[by yang chao END]]
     
     cocos2d::CCApplication::sharedApplication()->run();

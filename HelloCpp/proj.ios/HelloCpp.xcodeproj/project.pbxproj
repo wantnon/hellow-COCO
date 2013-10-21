@@ -237,7 +237,7 @@
 		1839B5AE1802B68D005EA308 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 781C33B31547F06B00633F88 /* AudioToolbox.framework */; };
 		1839B5AF1802B6CA005EA308 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 781C33B11547F06B00633F88 /* OpenAL.framework */; };
 		18B41E511802FBB7007B8CDD /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B41E4C1802FBB7007B8CDD /* AppDelegate.cpp */; };
-		18B41E521802FBB7007B8CDD /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B41E4F1802FBB7007B8CDD /* HelloWorldScene.cpp */; };
+		18B41E521802FBB7007B8CDD /* HelloWorldScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 18B41E4F1802FBB7007B8CDD /* HelloWorldScene.mm */; };
 		18B41E6C1802FBD0007B8CDD /* inputSignal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B41E541802FBD0007B8CDD /* inputSignal.cpp */; };
 		18B41E6D1802FBD0007B8CDD /* mouse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B41E561802FBD0007B8CDD /* mouse.cpp */; };
 		18B41E6E1802FBD0007B8CDD /* myBox2dFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B41E581802FBD0007B8CDD /* myBox2dFunc.cpp */; };
@@ -271,6 +271,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		5774DEE51814BADE00BD9A14 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5774DEE21814BADE00BD9A14 /* libWeChatSDK.a */; };
 		BF1373EF128A898400D9F789 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF492D4B1289302400A09262 /* OpenGLES.framework */; };
 		BF1373F0128A899500D9F789 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF492C21128924A800A09262 /* libxml2.dylib */; };
 		BF1373F1128A899E00D9F789 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF492B6912891AC600A09262 /* libz.dylib */; };
@@ -763,7 +764,7 @@
 		18B41E4C1802FBB7007B8CDD /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
 		18B41E4D1802FBB7007B8CDD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18B41E4E1802FBB7007B8CDD /* AppMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppMacros.h; sourceTree = "<group>"; };
-		18B41E4F1802FBB7007B8CDD /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
+		18B41E4F1802FBB7007B8CDD /* HelloWorldScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HelloWorldScene.mm; sourceTree = "<group>"; };
 		18B41E501802FBB7007B8CDD /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
 		18B41E541802FBD0007B8CDD /* inputSignal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = inputSignal.cpp; sourceTree = "<group>"; };
 		18B41E551802FBD0007B8CDD /* inputSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inputSignal.h; sourceTree = "<group>"; };
@@ -811,6 +812,9 @@
 		1D6058910D05DD3D006BFB54 /* HelloCpp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloCpp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5774DEE21814BADE00BD9A14 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		5774DEE31814BADE00BD9A14 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		5774DEE41814BADE00BD9A14 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		781C33B11547F06B00633F88 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		781C33B31547F06B00633F88 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		781C33B51547F06B00633F88 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -844,6 +848,7 @@
 				BF1373F1128A899E00D9F789 /* libz.dylib in Frameworks */,
 				1839B38718029AB8005EA308 /* libwebsockets.a in Frameworks */,
 				1839B38818029AB8005EA308 /* libwebsockets.a in Frameworks */,
+				5774DEE51814BADE00BD9A14 /* libWeChatSDK.a in Frameworks */,
 				1839B38918029AB9005EA308 /* libwebsockets.a in Frameworks */,
 				1839B38A18029AB9005EA308 /* libwebsockets.a in Frameworks */,
 				1839B38B18029AB9005EA308 /* libwebsockets.a in Frameworks */,
@@ -1858,7 +1863,7 @@
 				18B41E4C1802FBB7007B8CDD /* AppDelegate.cpp */,
 				18B41E4D1802FBB7007B8CDD /* AppDelegate.h */,
 				18B41E4E1802FBB7007B8CDD /* AppMacros.h */,
-				18B41E4F1802FBB7007B8CDD /* HelloWorldScene.cpp */,
+				18B41E4F1802FBB7007B8CDD /* HelloWorldScene.mm */,
 				18B41E501802FBB7007B8CDD /* HelloWorldScene.h */,
 			);
 			name = Classes;
@@ -1978,6 +1983,7 @@
 				18B41E781802FC1E007B8CDD /* Resources */,
 				BF5681CC1313A84D0055EEAC /* ios */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				5774DEE11814BADE00BD9A14 /* SDKExport */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -1998,6 +2004,17 @@
 				781C33B51547F06B00633F88 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5774DEE11814BADE00BD9A14 /* SDKExport */ = {
+			isa = PBXGroup;
+			children = (
+				5774DEE21814BADE00BD9A14 /* libWeChatSDK.a */,
+				5774DEE31814BADE00BD9A14 /* WXApi.h */,
+				5774DEE41814BADE00BD9A14 /* WXApiObject.h */,
+			);
+			name = SDKExport;
+			path = ../SDKExport;
 			sourceTree = "<group>";
 		};
 		BF5681CC1313A84D0055EEAC /* ios */ = {
@@ -2330,7 +2347,7 @@
 				1839B59218029AC9005EA308 /* SlotData.cpp in Sources */,
 				1839B59318029AC9005EA308 /* spine-cocos2dx.cpp in Sources */,
 				18B41E511802FBB7007B8CDD /* AppDelegate.cpp in Sources */,
-				18B41E521802FBB7007B8CDD /* HelloWorldScene.cpp in Sources */,
+				18B41E521802FBB7007B8CDD /* HelloWorldScene.mm in Sources */,
 				18B41E6C1802FBD0007B8CDD /* inputSignal.cpp in Sources */,
 				18B41E6D1802FBD0007B8CDD /* mouse.cpp in Sources */,
 				18B41E6E1802FBD0007B8CDD /* myBox2dFunc.cpp in Sources */,
@@ -2402,6 +2419,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../cocos2dx/platform/third_party/ios/libraries\"",
 					"\"$(SRCROOT)/../../../../external/libwebsockets/ios/lib\"",
+					"/Users/ck02-084/Documents/cocos2d-x-2.2/hellow-COCO/trunk/HelloCpp/SDKExport",
 				);
 				PRODUCT_NAME = HelloCpp;
 				PROVISIONING_PROFILE = "";
@@ -2453,6 +2471,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../cocos2dx/platform/third_party/ios/libraries\"",
 					"\"$(SRCROOT)/../../../../external/libwebsockets/ios/lib\"",
+					"/Users/ck02-084/Documents/cocos2d-x-2.2/hellow-COCO/trunk/HelloCpp/SDKExport",
 				);
 				PRODUCT_NAME = HelloCpp;
 				PROVISIONING_PROFILE = "";

@@ -73,6 +73,8 @@ public:
     void jumpKeyDown(CCObject *senderz, cocos2d::extension::CCControlEvent controlEvent);
     //shotKey
     void shotKeyDown(CCObject *senderz, cocos2d::extension::CCControlEvent controlEvent);
+    //weixin share
+    void weixin_share(CCObject *senderz, cocos2d::extension::CCControlEvent controlEvent);
   };
 
 #endif // __HELLO_WORLD_H__

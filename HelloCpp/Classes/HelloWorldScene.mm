@@ -21,7 +21,8 @@
 #include "myfunc.h"
 #include "thingManager.h"
 #include "tiledSceneLoader.h"
-
+#import "WXApiObject.h"
+#import "WXApi.h"
 
 using namespace cocos2d;
 using namespace CocosDenshion;
@@ -204,7 +205,7 @@ bool HelloWorld::init()
         cocos2d::extension::CCControlButton* controlButton=cocos2d::extension::CCControlButton::create(title, btnUp);
         controlButton->setBackgroundSpriteForState(btnDn,cocos2d::extension::CCControlStateHighlighted);
         controlButton->setPreferredSize(CCSize(100,100));
-        controlButton->setPosition(ccp(120,60));
+        controlButton->setPosition(ccp(120+100,60));
         controlButton->addTargetWithActionForControlEvents(this, (cocos2d::extension::SEL_CCControlHandler)(&HelloWorld::leftKeyDown), cocos2d::extension::CCControlEventTouchDown);
         controlButton->addTargetWithActionForControlEvents(this, (cocos2d::extension::SEL_CCControlHandler)(&HelloWorld::leftKeyUpInside), cocos2d::extension::CCControlEventTouchUpInside);
         controlButton->addTargetWithActionForControlEvents(this, (cocos2d::extension::SEL_CCControlHandler)(&HelloWorld::leftKeyDragEnter), cocos2d::extension::CCControlEventTouchDragEnter);
@@ -219,7 +220,7 @@ bool HelloWorld::init()
         cocos2d::extension::CCControlButton* controlButton=cocos2d::extension::CCControlButton::create(title, btnUp);
         controlButton->setBackgroundSpriteForState(btnDn,cocos2d::extension::CCControlStateHighlighted);
         controlButton->setPreferredSize(CCSize(100,100));
-        controlButton->setPosition(ccp(300,60));
+        controlButton->setPosition(ccp(300+100,60));
         controlButton->addTargetWithActionForControlEvents(this, (cocos2d::extension::SEL_CCControlHandler)(&HelloWorld::rightKeyDown), cocos2d::extension::CCControlEventTouchDown);
         controlButton->addTargetWithActionForControlEvents(this, (cocos2d::extension::SEL_CCControlHandler)(&HelloWorld::rightKeyUpInside), cocos2d::extension::CCControlEventTouchUpInside);
         controlButton->addTargetWithActionForControlEvents(this, (cocos2d::extension::SEL_CCControlHandler)(&HelloWorld::rightKeyDragEnter), cocos2d::extension::CCControlEventTouchDragEnter);
@@ -252,6 +253,20 @@ bool HelloWorld::init()
         
         this->getChildByTag(tag_root_ui)->addChild(controlButton);
     }
+    //--weixin share
+    {
+        cocos2d::extension::CCScale9Sprite* btnUp=cocos2d::extension::CCScale9Sprite::create("data/global/tex/button.png");
+        cocos2d::extension::CCScale9Sprite* btnDn=cocos2d::extension::CCScale9Sprite::create("data/global/tex/button_dn.png");
+        CCLabelTTF*title=CCLabelTTF::create("share", "Helvetica", 30);
+        cocos2d::extension::CCControlButton* controlButton=cocos2d::extension::CCControlButton::create(title, btnUp);
+        controlButton->setBackgroundSpriteForState(btnDn,cocos2d::extension::CCControlStateHighlighted);
+        controlButton->setPreferredSize(CCSize(100,100));
+        controlButton->setPosition(ccp(200,500));
+        controlButton->addTargetWithActionForControlEvents(this, (cocos2d::extension::SEL_CCControlHandler)(&HelloWorld::weixin_share), cocos2d::extension::CCControlEventTouchDown);
+        
+        this->getChildByTag(tag_root_ui)->addChild(controlButton);
+    }
+
 	/*
     //----¶¨ÒåÐü¹Òµã
     const float32 y = 640.0/PTM_RATIO;//15.0f;
@@ -422,6 +437,37 @@ HelloWorld::~HelloWorld()
     world = NULL;
     
 }
+
+void HelloWorld::weixin_share(CCObject *senderz, cocos2d::extension::CCControlEvent controlEvent){
+ /*   cout<<"hi"<<endl;
+    SendMessageToWXReq* req = [[[SendMessageToWXReq alloc] init]autorelease];
+    req.text = @"let's play hellow COCO!";
+    req.bText = YES;
+    req.scene = WXSceneSession;//_scene;
+    
+    [WXApi sendReq:req];*/
+    
+    WXMediaMessage *message = [WXMediaMessage message];
+    message.title = @"hellow COCO";
+    message.description = @"follow COCO to explore the world!";
+    [message setThumbImage:[UIImage imageNamed:@"iphone/weixin_share_image.png"]];
+    
+    WXWebpageObject *ext = [WXWebpageObject object];
+    ext.webpageUrl = @"http://user.qzone.qq.com/350479720/blog/1375017261";
+    
+    message.mediaObject = ext;
+    
+    SendMessageToWXReq* req = [[[SendMessageToWXReq alloc] init]autorelease];
+    req.bText = NO;
+    req.message = message;
+    req.scene = WXSceneSession;//_scene;
+    
+    [WXApi sendReq:req];
+    
+    
+    
+}
+
 void HelloWorld::rightKeyDown(CCObject *senderz, cocos2d::extension::CCControlEvent controlEvent){
     inputSignal.rightKeyDown=true;
     if(pPlayer->is_jump()){
