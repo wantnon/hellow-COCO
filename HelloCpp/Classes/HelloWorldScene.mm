@@ -471,11 +471,11 @@ void HelloWorld::weixinShare(CCObject *senderz, cocos2d::extension::CCControlEve
     WXMediaMessage *message = [WXMediaMessage message];
     message.title = @"hellow COCO";
     message.description = @"see my screenshot!";
-   // [message setThumbImage:[UIImage imageNamed:@"iphone/weixin_share_image.png"]];
-    string fileName="myScreenShot.png";
-    string fullpath = CCFileUtils::sharedFileUtils()->getWritablePath() + fileName;
-    NSString *fullpath_NS=[NSString stringWithUTF8String:fullpath.c_str()];
-    [message setThumbImage:[UIImage imageNamed:fullpath_NS]];
+   //[message setThumbImage:[UIImage imageNamed:@"iphone/weixin_share_image.png"]];
+    string fileName_weixin="myScreenShot_weixin.png";
+    string fullpath_weixinPic = CCFileUtils::sharedFileUtils()->getWritablePath() + fileName_weixin;
+    NSString *fullpath_NS=[NSString stringWithUTF8String:fullpath_weixinPic.c_str()];
+    [message setThumbImage:[UIImage imageWithContentsOfFile:fullpath_NS]];//do not use UIImage imageNamed, it used to read image from bundle
     
     WXWebpageObject *ext = [WXWebpageObject object];
     ext.webpageUrl = @"http://user.qzone.qq.com/350479720/blog/1375017261";
@@ -509,25 +509,36 @@ void HelloWorld::shotScreen(CCObject *senderz, cocos2d::extension::CCControlEven
     
     
     // create a render texture, this is what we are going to draw into
-    CCRenderTexture* renderTarget = CCRenderTexture::create(winSize.width, winSize.height, kCCTexture2DPixelFormat_RGBA8888);
-    renderTarget->retain();
+    CCRenderTexture* renderTarget = CCRenderTexture::create(winSize.width, winSize.height, kCCTexture2DPixelFormat_RGBA8888);    
     renderTarget->setPosition(ccp(winSize.width / 2, winSize.height / 2));
-    
     // begin drawing to the render texture
     renderTarget->begin();
-    
     this->visit();
-    
     // finish drawing and return context back to the screen
     renderTarget->end();
     
     
+    //renderTarget2
+    float L=min(winSize.height/2,winSize.width/2);
+    CCRenderTexture* renderTarget2 = CCRenderTexture::create(L, L, kCCTexture2DPixelFormat_RGBA8888);
+    renderTarget2->setPosition(ccp(winSize.width / 2, winSize.height / 2));
+    addChild(renderTarget2);
+    renderTarget2->begin();
+    renderTarget->setPosition(ccp(winSize.width / 4-(winSize.width-L)/8, winSize.height / 4));
+    renderTarget->setScaleX(0.5/*winSize.width/winSize.height*/);
+    renderTarget->setScaleY(0.5);
+    renderTarget->visit();
+
+    renderTarget2->end();
+        renderTarget->setScale(1);
+
+    
+    string fileName_weixinPic="myScreenShot_weixin.png";
+    bool succ_weixinPic=renderTarget2->saveToFile(fileName_weixinPic.c_str(), kCCImageFormatPNG);
+    string fullpath_weixinPic = CCFileUtils::sharedFileUtils()->getWritablePath() + fileName_weixinPic;
     string fileName="myScreenShot.png";
     bool succ=renderTarget->saveToFile(fileName.c_str(), kCCImageFormatPNG);
-    
-    cout<<"succ:"<<succ<<endl;
     string fullpath = CCFileUtils::sharedFileUtils()->getWritablePath() + fileName;
-    cout<<"full path:"<<fullpath<<endl;
     if(m_screenShotSprite==NULL){
         m_screenShotSprite=CCSprite::create();
         this->addChild(m_screenShotSprite,0);
@@ -541,7 +552,6 @@ void HelloWorld::shotScreen(CCObject *senderz, cocos2d::extension::CCControlEven
     this->getChildByTag(tag_root_scene_nonRolling)->setVisible(false);
     //set weixin share button visible
     m_controlButton_weixinShare->setVisible(true);
-    
 }
 
 void HelloWorld::rightKeyDown(CCObject *senderz, cocos2d::extension::CCControlEvent controlEvent){

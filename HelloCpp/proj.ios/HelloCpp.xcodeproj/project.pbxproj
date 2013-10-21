@@ -2419,7 +2419,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../cocos2dx/platform/third_party/ios/libraries\"",
 					"\"$(SRCROOT)/../../../../external/libwebsockets/ios/lib\"",
-					"/Users/ck02-084/Documents/cocos2d-x-2.2/hellow-COCO/trunk/HelloCpp/SDKExport",
+					"$(SRCROOT)/../SDKExport",
 				);
 				PRODUCT_NAME = HelloCpp;
 				PROVISIONING_PROFILE = "";
@@ -2471,7 +2471,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../cocos2dx/platform/third_party/ios/libraries\"",
 					"\"$(SRCROOT)/../../../../external/libwebsockets/ios/lib\"",
-					"/Users/ck02-084/Documents/cocos2d-x-2.2/hellow-COCO/trunk/HelloCpp/SDKExport",
+					"$(SRCROOT)/../SDKExport",
 				);
 				PRODUCT_NAME = HelloCpp;
 				PROVISIONING_PROFILE = "";
