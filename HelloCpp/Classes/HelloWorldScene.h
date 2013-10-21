@@ -34,13 +34,6 @@ public:
 
     // implement the "static node()" method manually
     CREATE_FUNC(HelloWorld);
-public:   
-	HelloWorld(){
-		m_waterSurfaceHeight=0;
-	};
-	~HelloWorld();
-	virtual void draw();
-    virtual void update(float dt);
 public:
 	//����
     b2World* world;
@@ -53,6 +46,32 @@ public:
     //ģ����Ϣģ��
     CmyObjInfo objInfo_shotBall_right;
     CmyObjInfo objInfo_shotBall_left;
+public:
+    cocos2d::extension::CCControlButton* m_controlButton_weixinShare;
+    cocos2d::extension::CCControlButton* m_controlButton_shotScreen;
+    cocos2d::extension::CCControlButton* m_controlButton_rightKey;
+    cocos2d::extension::CCControlButton* m_controlButton_leftKey;
+    cocos2d::extension::CCControlButton* m_controlButton_jumpKey;
+    cocos2d::extension::CCControlButton* m_controlButton_shotKey;
+public:
+    
+    CCSprite*m_screenShotSprite;
+public:
+	HelloWorld(){
+		m_waterSurfaceHeight=0;
+        m_screenShotSprite=NULL;
+        m_controlButton_weixinShare=NULL;
+        m_controlButton_shotScreen=NULL;
+        m_controlButton_rightKey=NULL;
+        m_controlButton_leftKey=NULL;
+        m_controlButton_shotKey=NULL;
+        m_controlButton_jumpKey=NULL;
+        
+	};
+	~HelloWorld();
+public:
+    virtual void visit(void);
+    virtual void update(float dt);
 public:
 	//----touch
  //   virtual void ccTouchesBegan(cocos2d::CCSet* touches , cocos2d::CCEvent* event);
@@ -74,7 +93,11 @@ public:
     //shotKey
     void shotKeyDown(CCObject *senderz, cocos2d::extension::CCControlEvent controlEvent);
     //weixin share
-    void weixin_share(CCObject *senderz, cocos2d::extension::CCControlEvent controlEvent);
+    void weixinShare(CCObject *senderz, cocos2d::extension::CCControlEvent controlEvent);
+    //shot screen
+    void shotScreen(CCObject *senderz, cocos2d::extension::CCControlEvent controlEvent);
+
+
   };
 
 #endif // __HELLO_WORLD_H__

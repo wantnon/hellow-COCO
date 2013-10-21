@@ -49,6 +49,7 @@ bool HelloWorld::init()
     CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
     CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
 
+    CCSize winSize = CCDirector::sharedDirector()->getWinSize();
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
     //    you may modify it.
@@ -77,7 +78,6 @@ bool HelloWorld::init()
 	// glClearColor(0, 0, 1, 1);
     CCDirector::sharedDirector()->setDisplayStats(false);//不显示帧率等信息
 
-    CCSize winSize = CCDirector::sharedDirector()->getWinSize();
 
     //----创建物理world
     b2Vec2 gravity;
@@ -211,6 +211,7 @@ bool HelloWorld::init()
         controlButton->addTargetWithActionForControlEvents(this, (cocos2d::extension::SEL_CCControlHandler)(&HelloWorld::leftKeyDragEnter), cocos2d::extension::CCControlEventTouchDragEnter);
         controlButton->addTargetWithActionForControlEvents(this, (cocos2d::extension::SEL_CCControlHandler)(&HelloWorld::leftKeyDragExit), cocos2d::extension::CCControlEventTouchDragExit);
         this->getChildByTag(tag_root_ui)->addChild(controlButton);
+        m_controlButton_leftKey=controlButton;
     }
     //--按钮right
     {
@@ -226,6 +227,7 @@ bool HelloWorld::init()
         controlButton->addTargetWithActionForControlEvents(this, (cocos2d::extension::SEL_CCControlHandler)(&HelloWorld::rightKeyDragEnter), cocos2d::extension::CCControlEventTouchDragEnter);
         controlButton->addTargetWithActionForControlEvents(this, (cocos2d::extension::SEL_CCControlHandler)(&HelloWorld::rightKeyDragExit), cocos2d::extension::CCControlEventTouchDragExit);
         this->getChildByTag(tag_root_ui)->addChild(controlButton);
+        m_controlButton_rightKey=controlButton;
     }
     //--按钮jump
     {
@@ -239,6 +241,7 @@ bool HelloWorld::init()
         controlButton->addTargetWithActionForControlEvents(this, (cocos2d::extension::SEL_CCControlHandler)(&HelloWorld::jumpKeyDown), cocos2d::extension::CCControlEventTouchDown);
        
         this->getChildByTag(tag_root_ui)->addChild(controlButton);
+        m_controlButton_jumpKey=controlButton;
     }
     //--按钮shot
     {
@@ -252,6 +255,7 @@ bool HelloWorld::init()
         controlButton->addTargetWithActionForControlEvents(this, (cocos2d::extension::SEL_CCControlHandler)(&HelloWorld::shotKeyDown), cocos2d::extension::CCControlEventTouchDown);
         
         this->getChildByTag(tag_root_ui)->addChild(controlButton);
+        m_controlButton_shotKey=controlButton;
     }
     //--weixin share
     {
@@ -262,9 +266,26 @@ bool HelloWorld::init()
         controlButton->setBackgroundSpriteForState(btnDn,cocos2d::extension::CCControlStateHighlighted);
         controlButton->setPreferredSize(CCSize(100,100));
         controlButton->setPosition(ccp(200,500));
-        controlButton->addTargetWithActionForControlEvents(this, (cocos2d::extension::SEL_CCControlHandler)(&HelloWorld::weixin_share), cocos2d::extension::CCControlEventTouchDown);
+        controlButton->addTargetWithActionForControlEvents(this, (cocos2d::extension::SEL_CCControlHandler)(&HelloWorld::weixinShare), cocos2d::extension::CCControlEventTouchDown);
         
         this->getChildByTag(tag_root_ui)->addChild(controlButton);
+        controlButton->setVisible(false);
+        m_controlButton_weixinShare=controlButton;
+    }
+    //--shot screen
+    {
+        cocos2d::extension::CCScale9Sprite* btnUp=cocos2d::extension::CCScale9Sprite::create("data/global/tex/button.png");
+        cocos2d::extension::CCScale9Sprite* btnDn=cocos2d::extension::CCScale9Sprite::create("data/global/tex/button_dn.png");
+        CCLabelTTF*title=CCLabelTTF::create("shot screen", "Helvetica", 30);
+        cocos2d::extension::CCControlButton* controlButton=cocos2d::extension::CCControlButton::create(title, btnUp);
+        controlButton->setBackgroundSpriteForState(btnDn,cocos2d::extension::CCControlStateHighlighted);
+        controlButton->setPreferredSize(CCSize(100,100));
+        controlButton->setPosition(ccp(500,500));
+        controlButton->addTargetWithActionForControlEvents(this, (cocos2d::extension::SEL_CCControlHandler)(&HelloWorld::shotScreen), cocos2d::extension::CCControlEventTouchDown);
+        
+        this->getChildByTag(tag_root_ui)->addChild(controlButton);
+        controlButton->setVisible(true);
+        m_controlButton_shotScreen=controlButton;
     }
 
 	/*
@@ -438,19 +459,23 @@ HelloWorld::~HelloWorld()
     
 }
 
-void HelloWorld::weixin_share(CCObject *senderz, cocos2d::extension::CCControlEvent controlEvent){
- /*   cout<<"hi"<<endl;
-    SendMessageToWXReq* req = [[[SendMessageToWXReq alloc] init]autorelease];
-    req.text = @"let's play hellow COCO!";
-    req.bText = YES;
-    req.scene = WXSceneSession;//_scene;
-    
-    [WXApi sendReq:req];*/
+void HelloWorld::weixinShare(CCObject *senderz, cocos2d::extension::CCControlEvent controlEvent){
+    /*   cout<<"hi"<<endl;
+     SendMessageToWXReq* req = [[[SendMessageToWXReq alloc] init]autorelease];
+     req.text = @"let's play hellow COCO!";
+     req.bText = YES;
+     req.scene = WXSceneSession;//_scene;
+     
+     [WXApi sendReq:req];*/
     
     WXMediaMessage *message = [WXMediaMessage message];
     message.title = @"hellow COCO";
-    message.description = @"follow COCO to explore the world!";
-    [message setThumbImage:[UIImage imageNamed:@"iphone/weixin_share_image.png"]];
+    message.description = @"see my screenshot!";
+   // [message setThumbImage:[UIImage imageNamed:@"iphone/weixin_share_image.png"]];
+    string fileName="myScreenShot.png";
+    string fullpath = CCFileUtils::sharedFileUtils()->getWritablePath() + fileName;
+    NSString *fullpath_NS=[NSString stringWithUTF8String:fullpath.c_str()];
+    [message setThumbImage:[UIImage imageNamed:fullpath_NS]];
     
     WXWebpageObject *ext = [WXWebpageObject object];
     ext.webpageUrl = @"http://user.qzone.qq.com/350479720/blog/1375017261";
@@ -465,6 +490,57 @@ void HelloWorld::weixin_share(CCObject *senderz, cocos2d::extension::CCControlEv
     [WXApi sendReq:req];
     
     
+    
+}
+
+void HelloWorld::shotScreen(CCObject *senderz, cocos2d::extension::CCControlEvent controlEvent){
+   // cout<<"hi"<<endl;
+    
+    //mask visit to render to texture
+    CCSize winSize = CCDirector::sharedDirector()->getWinSize();
+    
+    //set all button invisible
+    m_controlButton_weixinShare->setVisible(false);
+    m_controlButton_shotScreen->setVisible(false);
+    m_controlButton_jumpKey->setVisible(false);
+    m_controlButton_leftKey->setVisible(false);
+    m_controlButton_rightKey->setVisible(false);
+    m_controlButton_shotKey->setVisible(false);
+    
+    
+    // create a render texture, this is what we are going to draw into
+    CCRenderTexture* renderTarget = CCRenderTexture::create(winSize.width, winSize.height, kCCTexture2DPixelFormat_RGBA8888);
+    renderTarget->retain();
+    renderTarget->setPosition(ccp(winSize.width / 2, winSize.height / 2));
+    
+    // begin drawing to the render texture
+    renderTarget->begin();
+    
+    this->visit();
+    
+    // finish drawing and return context back to the screen
+    renderTarget->end();
+    
+    
+    string fileName="myScreenShot.png";
+    bool succ=renderTarget->saveToFile(fileName.c_str(), kCCImageFormatPNG);
+    
+    cout<<"succ:"<<succ<<endl;
+    string fullpath = CCFileUtils::sharedFileUtils()->getWritablePath() + fileName;
+    cout<<"full path:"<<fullpath<<endl;
+    if(m_screenShotSprite==NULL){
+        m_screenShotSprite=CCSprite::create();
+        this->addChild(m_screenShotSprite,0);
+    }
+    m_screenShotSprite->setVisible(true);
+    m_screenShotSprite->initWithFile(fullpath.c_str());
+    m_screenShotSprite->setScale(0.5);
+    m_screenShotSprite->setPosition(ccp(winSize.width/2,winSize.height/2));
+    //set game scene invisible
+    this->getChildByTag(tag_root_scene_rolling)->setVisible(false);
+    this->getChildByTag(tag_root_scene_nonRolling)->setVisible(false);
+    //set weixin share button visible
+    m_controlButton_weixinShare->setVisible(true);
     
 }
 
@@ -702,15 +778,10 @@ void HelloWorld::shotKeyDown(CCObject *senderz, cocos2d::extension::CCControlEve
 
 
 
-
-void HelloWorld::draw()
-//注意，重载的draw只处理本节点的渲染，不管子节点
-{
-    //----画本节点
-    CCLayer::draw();//如果本Layer没有贴图，则此句画不出任何东西
-   
-
-
+void HelloWorld::visit(void){
+    
+    CCLayer::visit();
+    
 }
 
 void HelloWorld::update(float dt)
